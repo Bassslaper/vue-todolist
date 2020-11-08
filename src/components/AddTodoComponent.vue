@@ -16,7 +16,6 @@
     },
     methods: {
       onSubmit() {
-        console.log("Значение инпута: ", this.title);
         if(this.title.trim()) {
           const newTodo = {
             id: Math.floor(Date.now() / (Math.random() * (Math.random() + Math.random()) * 1000000000) ), 
@@ -43,7 +42,7 @@
   }
 
   input {
-    width: 40rem;
+    width: 60%;
     margin-right: 1rem;
     border-radius: 1rem;
     border: 3px solid #f6f6;
@@ -66,6 +65,19 @@
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
     letter-spacing: 1.5px;
+    cursor: pointer;
   }
+
+  button:hover {
+    background-color: #008fff;
+  }
+
+  @media (max-width: 992px) { 
+    input {
+      font-size: 0.8rem;
+    }
+    
+  }
+
 
 </style>
